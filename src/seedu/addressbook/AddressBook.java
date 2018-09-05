@@ -211,7 +211,8 @@ public class AddressBook {
         processProgramArgs(args);
         loadDataFromStorage();
         while (true) {
-            String userCommand = getUserInput();
+            String userInput = getUserInput();
+	    String userCommand = userInput.toLowerCase();
             echoUserCommand(userCommand);
             String feedback = executeCommand(userCommand);
             showResultToUser(feedback);
